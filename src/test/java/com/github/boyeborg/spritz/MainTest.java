@@ -15,6 +15,7 @@ public class MainTest extends TestCase {
 	}
 
 	public void testMain() {
+		(new Main()).main(null);
 		assertTrue(true);
 	}
 }
