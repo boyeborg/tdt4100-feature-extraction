@@ -164,6 +164,11 @@
 			<property name="lineWrappingIndentation" value="4"/>
 			<property name="arrayInitIndent" value="2"/>
 		</module>
+		<!-- Enforce tabs -->
+		<module name="RegexpSinglelineJava">
+			<property name="format" value="^\t*(?! \*) "/>
+			<property name="message" value="Indent must use tab characters"/>
+		</module>
 		<module name="AbbreviationAsWordInName">
 			<property name="ignoreFinal" value="false"/>
 			<property name="allowedAbbreviationLength" value="1"/>
