@@ -1,4 +1,4 @@
-# ![Spritz](./resources/logos/spritz-logo-text.png)
+# ![Spritz](./resources/spritz-logo-text.png)
 
 [![Build Status](https://img.shields.io/travis/boyeborg/spritz/master.svg?style=flat-square&longCache=true)](https://travis-ci.org/boyeborg/spritz)
 [![Codecov](https://img.shields.io/codecov/c/github/boyeborg/spritz/master.svg?style=flat-square&longCache=true)](https://codecov.io/gh/boyeborg/spritz)
