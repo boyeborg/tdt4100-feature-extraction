@@ -18,6 +18,7 @@
 	<property name="fileExtensions" value="java, properties, xml"/>
 
 	<module name="TreeWalker">
+		<property name="tabWidth" value="2"/>
 		<module name="OuterTypeFilename"/>
 		<module name="IllegalTokenText">
 			<property name="tokens" value="STRING_LITERAL, CHAR_LITERAL"/>
@@ -155,13 +156,13 @@
 				value="GenericWhitespace ''{0}'' is not preceded with whitespace."/>
 		</module>
 		<module name="Indentation">
-			<!-- Tabs are interpereded as 8 spaces; tabs are superior -->
-			<property name="basicOffset" value="8"/>
+			<!-- Tabs are interpreted as two spaces -->
+			<property name="basicOffset" value="2"/>
 			<property name="braceAdjustment" value="0"/>
-			<property name="caseIndent" value="8"/>
-			<property name="throwsIndent" value="16"/>
-			<property name="lineWrappingIndentation" value="16"/>
-			<property name="arrayInitIndent" value="8"/>
+			<property name="caseIndent" value="2"/>
+			<property name="throwsIndent" value="4"/>
+			<property name="lineWrappingIndentation" value="4"/>
+			<property name="arrayInitIndent" value="2"/>
 		</module>
 		<module name="AbbreviationAsWordInName">
 			<property name="ignoreFinal" value="false"/>
