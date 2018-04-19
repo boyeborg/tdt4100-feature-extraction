@@ -1,3 +1,7 @@
 {
-    "java.configuration.updateBuildConfiguration": "automatic"
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "checkstyle.autocheck": true,
+    "checkstyle.version": "8.9",
+    "checkstyle.configurationFile": "checkstyle.xml",
+    "checkstyle.showCheckstyleVersionInvalid": true
 }
