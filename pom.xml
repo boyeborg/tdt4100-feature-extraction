@@ -13,6 +13,13 @@
 	<description>Freature extraction from event based streams.</description>
 	<url>https://github.com/boyeborg/spritz</url>
 
+	<licenses>
+		<license>
+			<name>GNU General Public License version 3 (GNU GPLv3)</name>
+			<url>https://www.gnu.org/licenses/gpl.txt</url>
+		</license>
+	</licenses>
+
 	<issueManagement>
 		<system>GitHub</system>
 		<url>https://github.com/boyeborg/spritz/issues</url>
@@ -22,12 +29,13 @@
 		<url>https://github.com/boyeborg/spritz</url>
 	</scm>
 
-	<licenses>
-		<license>
-			<name>GNU General Public License version 3 (GNU GPLv3)</name>
-			<url>https://www.gnu.org/licenses/gpl.txt</url>
-		</license>
-	</licenses>
+	<developers>
+    <developer>
+      <id>boyeborg</id>
+      <name>Boye Borg</name>
+      <email>boye.borg@icloud.com</email>
+    </developer>
+  </developers>
 
 	<dependencies>
 		<dependency>
