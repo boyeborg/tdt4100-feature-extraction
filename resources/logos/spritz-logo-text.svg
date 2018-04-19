@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="883px" height="376px" viewBox="0 0 883 376" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="-29.0295482%" y1="-40.6727003%" x2="63.2346406%" y2="87.2756015%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" offset="0%"></stop>
+            <stop stop-color="#2778C2" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-2" transform="translate(10.000000, 10.000000)">
+            <g id="Group">
+                <circle id="Oval" stroke="#5F6F8A" stroke-width="20" cx="178" cy="178" r="178"></circle>
+                <path d="M29.6653816,61 L71.3957724,281 L339,281 C339,281 331.580326,236.026377 309.49017,224.272899 C287.400014,212.519422 236.859059,210.464075 236.859059,210.464075 C234.104049,210.312348 232.395969,208.009372 232.859026,205.299299 C232.859026,205.299299 240.547017,181.955382 215.917458,159.255436 C191.287899,136.55549 139.372692,134.697937 139.372692,134.697937 C136.629531,134.524015 135.490347,132.431354 136.738173,129.960645 C136.738173,129.960645 153.893921,102.013918 134.64262,87.1438336 C115.391318,72.2737491 29.6653816,61 29.6653816,61 Z" id="Path" stroke="url(#linearGradient-1)" stroke-width="30"></path>
+                <circle id="Oval-2" stroke="#6EA5D7" stroke-width="20" cx="198" cy="61" r="20"></circle>
+                <circle id="Oval-2" stroke="#2778C2" stroke-width="20" cx="282" cy="137" r="20"></circle>
+            </g>
+            <text id="spritz" font-family="GeosansLight" font-size="200" font-weight="normal" fill="#5F6F8A">
+                <tspan x="471" y="220">spritz</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
