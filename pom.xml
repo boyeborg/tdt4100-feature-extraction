@@ -37,6 +37,15 @@
     </developer>
   </developers>
 
+	<contributors>
+		<!-- Example:
+		<contributor>
+			<name>Jane Doe</name>
+			<email>jane.doe@example.com</email>
+		</contributor>
+		-->
+  </contributors>
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
