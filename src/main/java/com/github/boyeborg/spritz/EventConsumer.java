@@ -40,6 +40,8 @@ public class EventConsumer<T> {
 	/**
 	 * Adds a event to the current batch.
 	 * 
+	 * @param event The event to add
+	 * 
 	 * @see #newBatch()
 	 */
 	public void addEvent(T event) {
@@ -48,6 +50,8 @@ public class EventConsumer<T> {
 
 	/**
 	 * Adds multiple events to the current batch.
+	 * 
+	 * @param events A list of the events to add
 	 * 
 	 * @see #newBatch()
 	 */
@@ -70,7 +74,7 @@ public class EventConsumer<T> {
 	 * Both the batches and results from the collectors are returned in the same order as they were
 	 * added.
 	 * 
-	 * @return The result of each batch after calling {@link #calculateResult()}.
+	 * @return The result of each collector of each batch.
 	 * 
 	 */
 	public String[][] getResults() {

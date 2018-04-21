@@ -15,11 +15,15 @@ public interface ICollector<T> {
 
 	/**
 	 * Adds an event to the collector.
+	 * 
+	 * @param event The event to add
 	 */
 	public void addEvent(T event);
 
 	/**
 	 * Returns the result of the collector.
+	 * 
+	 * @return The result of the collector as a string
 	 * 
 	 * @see #process()
 	 */
