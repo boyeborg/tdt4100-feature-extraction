@@ -4,18 +4,17 @@ import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
 
-public class MainTest extends TestCase {
+public class SampleTest extends TestCase {
 	
-	public MainTest(String testName) {
+	public SampleTest(String testName) {
 		super(testName);
 	}
 
 	public static Test suite() {
-		return new TestSuite(MainTest.class);
+		return new TestSuite(SampleTest.class);
 	}
 
 	public void testMain() {
-		(new Main()).main(null);
 		assertTrue(true);
 	}
 }
