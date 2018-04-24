@@ -4,14 +4,14 @@
 		http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.boyeborg</groupId>
+	<groupId>com.github.openwhale</groupId>
 	<artifactId>spritz</artifactId>
 	<version>0.1</version>
 	<packaging>jar</packaging>
 
 	<name>Spritz</name>
 	<description>Freature extraction from event based streams.</description>
-	<url>https://github.com/boyeborg/spritz</url>
+	<url>https://github.com/openwhale/spritz</url>
 
 	<licenses>
 		<license>
@@ -22,11 +22,11 @@
 
 	<issueManagement>
 		<system>GitHub</system>
-		<url>https://github.com/boyeborg/spritz/issues</url>
+		<url>https://github.com/openwhale/spritz/issues</url>
 	</issueManagement>
 
 	<scm>
-		<url>https://github.com/boyeborg/spritz</url>
+		<url>https://github.com/openwhale/spritz</url>
 	</scm>
 
 	<developers>
