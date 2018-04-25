@@ -13,6 +13,7 @@ public class EventConsumer<T> {
 	private List<Batch<T>> batches;
 	private Batch<T> currentBatch;
 	private CollectorFactory<T> collectorFactory;
+	private String batchNameDescription = "batchNumber";
 
 	/**
 	 * Constructor for the EventConsumer class.
@@ -25,13 +26,33 @@ public class EventConsumer<T> {
 	}
 
 	/**
+	 * Sets the description of the batch name, used in the header of the result.
+	 * 
+	 * @param description The description of the batch names
+	 */
+	public void setBatchNameDescription(String description) {
+		batchNameDescription = description;
+	}
+
+	/**
+	 * Adds a new batch and sets it as the current batch.
+	 * 
+	 * @param name The name of the batch
+	 * 
+	 * @see #addEvent(Object)
+	 */
+	public void newBatch(String name) {
+		currentBatch = new Batch<T>(collectorFactory, name);
+		batches.add(currentBatch);
+	}
+
+	/**
 	 * Adds a new batch and sets it as the current batch.
 	 * 
 	 * @see #addEvent(Object)
 	 */
 	public void newBatch() {
-		currentBatch = new Batch<T>(collectorFactory);
-		batches.add(currentBatch);
+		newBatch(String.format("Batch-%d", batches.size() + 1));
 	}
 
 	/**
@@ -100,6 +121,6 @@ public class EventConsumer<T> {
 	public String toString() {
 		String headers = collectorFactory.names().stream().collect(Collectors.joining(","));
 		String results = batches.stream().map(Batch::toString).collect(Collectors.joining("\n"));
-		return headers + "\n" + results;
+		return batchNameDescription + "," + headers + "\n" + results;
 	}
 }

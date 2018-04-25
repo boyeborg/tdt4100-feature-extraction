@@ -10,14 +10,17 @@ import java.util.stream.Collectors;
 public class Batch<T> {
 
 	private List<ICollector<T>> collectors;
+	private String name;
 
 	/**
 	 * Creates a new batch.
 	 * 
 	 * @param collectorFactory A factory containing the generators to generate the collectors to use
 	 *     in the batch.
+	 * @param name The name of the batch
 	 */
-	public Batch(CollectorFactory<T> collectorFactory) {
+	public Batch(CollectorFactory<T> collectorFactory, String name) {
+		this.name = name;
 		collectors = new ArrayList<>();
 
 		collectorFactory.get().forEach(collectors::add);
@@ -71,10 +74,20 @@ public class Batch<T> {
 		return collectors;
 	}
 
+	/**
+	 * Returns the name of the Batch.
+	 * 
+	 * @return The name of the batch
+	 */
+	public String getName() {
+		return name;
+	}
+
 	@Override
 	public String toString() {
-		return collectors.stream()
-			.map(ICollector::getResult)
-			.collect(Collectors.joining(","));
+		String results = collectors.stream()
+				.map(ICollector::getResult)
+				.collect(Collectors.joining(","));
+		return name + "," + results;
 	}
 }
