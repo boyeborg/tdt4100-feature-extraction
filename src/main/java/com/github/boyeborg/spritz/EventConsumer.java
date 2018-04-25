@@ -42,6 +42,11 @@ public class EventConsumer<T> {
 	 * @see #newBatch()
 	 */
 	public void addEvent(T event) {
+		if (currentBatch == null) {
+			// Auto add the first batch
+			newBatch();
+		}
+		
 		currentBatch.addEvent(event);
 	}
 
