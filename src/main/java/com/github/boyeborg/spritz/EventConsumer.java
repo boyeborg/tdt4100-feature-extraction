@@ -98,6 +98,8 @@ public class EventConsumer<T> {
 	 */
 	@Override
 	public String toString() {
-		return batches.stream().map(Batch::toString).collect(Collectors.joining("\n"));
+		String headers = collectorFactory.names().stream().collect(Collectors.joining(","));
+		String results = batches.stream().map(Batch::toString).collect(Collectors.joining("\n"));
+		return headers + "\n" + results;
 	}
 }
