@@ -22,9 +22,6 @@ public class EventConsumer<T> {
 	public EventConsumer(CollectorFactory<T> collectorFactory) {
 		this.collectorFactory = collectorFactory;
 		this.batches = new ArrayList<>();
-
-		// Add first batch
-		newBatch();
 	}
 
 	/**
@@ -45,6 +42,11 @@ public class EventConsumer<T> {
 	 * @see #newBatch()
 	 */
 	public void addEvent(T event) {
+		if (currentBatch == null) {
+			// Auto add the first batch
+			newBatch();
+		}
+		
 		currentBatch.addEvent(event);
 	}
 
