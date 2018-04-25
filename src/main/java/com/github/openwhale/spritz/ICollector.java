@@ -1,4 +1,4 @@
-package com.github.boyeborg.spritz;
+package com.github.openwhale.spritz;
 
 /**
  * Collector that collects data from events for feature extraction. Often combined with other
