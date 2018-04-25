@@ -1,4 +1,4 @@
-package com.github.boyeborg.spritz;
+package com.github.openwhale.spritz;
 
 import java.util.ArrayList;
 import java.util.List;

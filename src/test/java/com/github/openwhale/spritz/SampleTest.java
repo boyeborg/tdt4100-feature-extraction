@@ -1,4 +1,4 @@
-package com.github.boyeborg.spritz;
+package com.github.openwhale.spritz;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
