@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 /**
  * A batch holds multiple collectors, and are used to group the collection of events.
  */
-public class Batch<T> {
+public class Batch<T> implements Runnable {
 
 	private List<ICollector<T>> collectors;
 
@@ -76,5 +76,10 @@ public class Batch<T> {
 		return collectors.stream()
 			.map(ICollector::getResult)
 			.collect(Collectors.joining(","));
+	}
+
+	@Override
+	public void run() {
+		process();
 	}
 }
