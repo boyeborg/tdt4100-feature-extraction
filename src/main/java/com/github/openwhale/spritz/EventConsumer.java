@@ -71,6 +71,26 @@ public class EventConsumer<T> {
 	}
 
 	/**
+	 * Executes teh processing lifecy of each plugin within each batch. The batches are executed in
+	 * paralell.
+	 * 
+	 * @throws InterruptedException One of the batches was interrupted.
+	 */
+	public void processMultithres() throws InterruptedException {
+		Thread[] threads = new Thread[batches.size()];
+		
+		for (int i = 0; i < batches.size(); i++) {
+			Thread thread = new Thread(batches.get(i));
+			thread.start();
+			threads[i] = thread;
+		}
+
+		for (Thread thread : threads) {
+			thread.join();
+		}
+	}
+
+	/**
 	 * Returns all the results as a two dimensional matrix; one array for each batch.
 	 * Each batch array contains the results from each plugin (as a string).
 	 * Both the batches and results from the collectors are returned in the same order as they were
