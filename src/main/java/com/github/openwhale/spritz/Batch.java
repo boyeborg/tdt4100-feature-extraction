@@ -2,7 +2,7 @@ package com.github.openwhale.spritz;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * A batch holds multiple collectors, and are used to group the collection of events.
@@ -10,14 +10,18 @@ import java.util.stream.Collectors;
 public class Batch<T> implements Runnable {
 
 	private List<ICollector<T>> collectors;
+	private String id;
 
 	/**
 	 * Creates a new batch.
 	 * 
 	 * @param collectorFactory A factory containing the generators to generate the collectors to use
 	 *     in the batch.
+	 * @param id The ID of the batch. Should be a unique string able to destinguish this batch from
+	 *     other batches within the same {@link EventConsumer}.
 	 */
-	public Batch(CollectorFactory<T> collectorFactory) {
+	public Batch(CollectorFactory<T> collectorFactory, String id) {
+		this.id = id;
 		collectors = new ArrayList<>();
 
 		collectorFactory.get().forEach(collectors::add);
@@ -42,9 +46,10 @@ public class Batch<T> implements Runnable {
 	 * @return An array of the results form the collectors.
 	 */
 	public String[] getResult() {
-		return collectors.stream()
-			.map(ICollector::getResult)
-			.toArray(String[]::new);
+		return Stream.concat(
+			Stream.of(id),
+			collectors.stream().map(ICollector::getResult)
+		).toArray(String[]::new);
 	}
 
 	/**
@@ -71,11 +76,18 @@ public class Batch<T> implements Runnable {
 		return collectors;
 	}
 
+	/**
+	 * Returns the ID of the batch.
+	 * 
+	 * @return The id.
+	 */
+	public String getId() {
+		return id;
+	}
+
 	@Override
-	public String toString() {
-		return collectors.stream()
-			.map(ICollector::getResult)
-			.collect(Collectors.joining(","));
+	public String toString() {	
+		return String.join(",", getResult());
 	}
 
 	@Override
